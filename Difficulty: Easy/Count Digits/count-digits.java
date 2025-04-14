@@ -1,42 +1,27 @@
 //{ Driver Code Starts
-// Initial Template for Java
 
-import java.util.Scanner;
-
-class Main {
-
-    
 // } Driver Code Ends
 
-// User function Template for Java
+//Back-end complete function Template for Java
+import java.util.*;
 
-public static int countDigits(int n) {
-
-    int count=0;
-   
-    // write your code here
-    // return number of digits in n
-    if(n==0)
-    {
-        return 0;
+public class Main {
+    public static void main(String args[]) {
+        // Your Code Here
+        Scanner sc= new Scanner(System.in);
+        int num=sc.nextInt();
+        int count=0;
+        while(num!=0)
+        {
+            int rem=num%10;
+            num/=10;
+            count++;
+           
+        }
+         System.out.println(count);
     }
-    return 1+countDigits(n/10);
-   
 }
 
 
 //{ Driver Code Starts.
-
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int t = scn.nextInt();
-        while (t-- > 0) {
-            int n = scn.nextInt();
-            System.out.println(countDigits(n));
-
-            System.out.println("~");
-        }
-        scn.close();
-    }
-}
 // } Driver Code Ends
